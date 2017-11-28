@@ -17,10 +17,13 @@ export class Home extends Component {
         <section className="home">
           <div className="crowdsale">
             <div className="container">
-              <h1 className="title">Конструктор ICO</h1>
+              <h1 className="title">XPOWERMINER XPS ICO</h1>
               <p className="description">
-              Конструктор ICO позволяет выпустить собственный токен и разместить контракт ICO всего за 5 шагов. С помощью нашего Конструктора Вы сможете запустить компанию по сбору средств(краудсейл) в блокчейне Ethereum, верифицировать контракты токена и ICO  на Etherscan, получить страницу отображающую ход компании по сбору средств и страницу участия в ICO 
-              <br/>Смарт контракты основаны на коде <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
+              
+              XPS токены подкреплены реальным майнингом и 
+              бесплатной электроэнергией от ветрогенераторов!
+ 
+              <br/>Смарт контракты ICO основаны на коде <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
               </p>
               <div className="buttons">
                 <Link to={{ pathname: '/crowdsale?addr=0xdeC7852E579aeCD9CDf8bcA6C36F2Fc22B6cb833&networkID=42', query: { state: this.state } }}><a className="button button_fill">Статистика кампании</a></Link>
@@ -30,34 +33,6 @@ export class Home extends Component {
           </div>
           <div className="process">
             <div className="container">
-              <div className="process-item">
-                <div className="step-icons step-icons_crowdsale-contract"></div>
-                <p className="title">Контракт краудсейл</p>
-                <p className="description">
-                  Выберете сценарий
-                </p>
-              </div>
-              <div className="process-item">
-                <div className="step-icons step-icons_token-setup"></div>
-                <p className="title">Параметры токена</p>
-                <p className="description">
-                  Настраивайте и резервируйте токены
-                </p>
-              </div>
-              <div className="process-item">
-                <div className="step-icons step-icons_crowdsale-setup"></div>
-                <p className="title">Параметры компании</p>
-                <p className="description">
-                  Создавайте слои и задавайте параметры
-                </p>
-              </div>
-              <div className="process-item">
-                <div className="step-icons step-icons_publish"></div>
-                <p className="title">Публикация</p>
-                <p className="description">
-                  Получите код и метаданные для верификации в Etherscan
-                </p>
-              </div>
               <div className="process-item">
                 <div className="step-icons step-icons_crowdsale-page"></div>
                 <p className="title">Страница кампании</p>
