@@ -26,7 +26,7 @@ export class Home extends Component {
               <br/>Смарт контракты ICO основаны на коде <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
               </p>
               <div className="buttons">
-                <Link to={{ pathname: '/crowdsale', query: { state: this.state } }}><a className="button button_fill">Статистика кампании</a></Link>
+                <Link to={{ pathname: '/crowdsale', query: { addr: '0xdeC7852E579aeCD9CDf8bcA6C36F2Fc22B6cb83' } }}><a className="button button_fill">Статистика кампании</a></Link>
                 <Link to={{ pathname: '/invest', query: { state: this.state } }}><a className="button button_fill">Страница Участника</a></Link> 
               </div>
             </div>
