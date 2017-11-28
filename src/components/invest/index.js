@@ -380,7 +380,7 @@ export class Invest extends React.Component {
               </select>
               {
                 this.state.investThrough === INVESTMENT_OPTIONS.METAMASK
-                  ? <a className="button button_fill" onClick={this.investToTokens}>Contribute</a>
+                  ? <a className="button button_fill" onClick={this.investToTokens}>Получить токены</a>
                   : null
               }
             </div>
