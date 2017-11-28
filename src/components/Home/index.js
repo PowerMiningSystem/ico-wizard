@@ -31,6 +31,7 @@ export class Home extends Component {
               </div>
             </div>
           </div>
+      <center>
           <div className="process">
             <div className="container">
               <div className="process-item">
@@ -42,7 +43,8 @@ export class Home extends Component {
               </div>
             </div>
           </div>
-        </section>
+      </center>
+      </section>
       </div>
     );
   }
