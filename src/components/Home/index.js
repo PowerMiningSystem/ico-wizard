@@ -3,6 +3,7 @@ import '../../assets/stylesheets/application.css';
 import { getWeb3, getNetworkVersion } from '../../utils/blockchainHelpers'
 import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
+import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
 
 export class Home extends Component {
@@ -10,7 +11,32 @@ export class Home extends Component {
     super(props);
     this.state = defaultState
   }
+  
+  goToInvestPageH = () => {
+  		let queryStr = "";
+  		if (!ICOConfig.crowdsaleContractURL || !ICOConfig.networkID) {
+  			if (this.state.contracts.crowdsale.addr) {
+	  			queryStr = "?addr=" + this.state.contracts.crowdsale.addr[0];
+	  			if (this.state.networkID)
+	  				queryStr += "&networkID=" + this.state.networkID;
+	  		}
+  		}
 
+      this.props.history.push('/invest' + queryStr);
+  	}
+  
+  goToCrowdsalePageH = () => {
+  		let queryStr = "";
+  		if (!ICOConfig.crowdsaleContractURL || !ICOConfig.networkID) {
+  			if (this.state.contracts.crowdsale.addr) {
+	  			queryStr = "?addr=" + this.state.contracts.crowdsale.addr[0];
+	  			if (this.state.networkID)
+	  				queryStr += "&networkID=" + this.state.networkID;
+	  		}
+  		}
+
+      this.props.history.push('/crowdsale' + queryStr);
+  	}
   render() {
     return (
       <div>
@@ -26,8 +52,8 @@ export class Home extends Component {
               <br/>Смарт контракты ICO основаны на коде <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
               </p>
               <div className="buttons">
-                <Link to={{ pathname: '/crowdsale', query: { state: this.state } }}><a className="button button_fill">Статистика кампании</a></Link>
-                <Link to={{ pathname: '/invest', query: { state: this.state } }}><a className="button button_fill">Страница Участника</a></Link> 
+                <a onClick={this.goToCrowdsalePageH} className="button button_fill">Статистика кампании</a>
+                <a onClick={this.goToInvestPageH} className="button button_fill">Страница Участника</a>
               </div>
             </div>
           </div>
