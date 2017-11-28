@@ -1,7 +1,7 @@
 export const defaultState = { 
 	contracts: { 
 		token: {}, 
-		crowdsale: {addr:[], abiConstructor:[]},
+		crowdsale: {addr:[0xdeC7852E579aeCD9CDf8bcA6C36F2Fc22B6cb833], abiConstructor:[]},
 		pricingStrategy: {addr:[], abiConstructor:[]},
 		nullFinalizeAgent: {addr:[], abiConstructor:[]},
 		finalizeAgent: {addr:[], abiConstructor:[]}
