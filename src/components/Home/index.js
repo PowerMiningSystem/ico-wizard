@@ -13,8 +13,7 @@ var TR_pagedata={
       "2": "XPOWERMINER XPS ICO"
       },
       "descrip1":{
-      "1": "XPS токены подкреплены реальным майнингом и бесплатной электроэнергией от ветрогенераторов!
-Смарт контракты ICO основаны на коде TokenMarket.",
+      "1": "XPS токены подкреплены реальным майнингом и бесплатной электроэнергией от ветрогенераторов! Смарт контракты ICO основаны на коде TokenMarket.",
       "2": "The XPS tokens - backed with mining and free electricity from Wind Turbines!"
       },
       "butt1":{
