@@ -69,7 +69,7 @@ export class Home extends Component {
     return (
     
     
-    {this.Ch_lang(TR_pagedata)};
+    {Ch_lang(TR_pagedata)};
     
       <div>
       
