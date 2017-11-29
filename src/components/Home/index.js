@@ -7,6 +7,35 @@ import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
 import {Ch_lang} from './utils/Translate'
 
+var TR_pagedata={
+    	"title1": {
+      "1": "XPOWERMINER XPS ICO",
+      "2": "XPOWERMINER XPS ICO"
+      },
+      "descrip1":{
+      "1": "XPS токены подкреплены реальным майнингом и бесплатной электроэнергией от ветрогенераторов!
+Смарт контракты ICO основаны на коде TokenMarket.",
+      "2": "The XPS tokens - backed with mining and free electricity from Wind Turbines!"
+      },
+      "butt1":{
+      "1":"Статистика кампании",
+      "2":"Crowdsale Page"
+      },
+      "butt2":{
+      "1":"Страница Участника",
+      "2":"Invest Page"
+      },
+      "title2":{
+      "1":"Страница кампании",
+      "2":"Crowdsale Page"
+      },
+      "descrip2":{
+      "1":"Добавьте в избранное для мониторинга статистики",
+      "2":"Bookmark this page for the campaign statistics"
+      },
+
+    };
+    
 export class Home extends Component {
   constructor(props) {
     super(props);
@@ -39,36 +68,9 @@ export class Home extends Component {
   	}
   render() {
     return (
-    var TR_pagedata={
-    	"title1": {
-      "1": "XPOWERMINER XPS ICO",
-      "2": "XPOWERMINER XPS ICO"
-      },
-      "descrip1":{
-      "1": "XPS токены подкреплены реальным майнингом и бесплатной электроэнергией от ветрогенераторов!
-Смарт контракты ICO основаны на коде TokenMarket.",
-      "2": "The XPS tokens - backed with mining and free electricity from Wind Turbines!"
-      },
-      "butt1":{
-      "1":"Статистика кампании",
-      "2":"Crowdsale Page"
-      },
-      "butt2":{
-      "1":"Страница Участника",
-      "2":"Invest Page"
-      },
-      "title2":{
-      "1":"Страница кампании",
-      "2":"Crowdsale Page"
-      },
-      "descrip2":{
-      "1":"Добавьте в избранное для мониторинга статистики",
-      "2":"Bookmark this page for the campaign statistics"
-      },
-
-    };
     
-    {Ch_lang(TR_pagedata);}
+    
+    {this.Ch_lang(TR_pagedata)};
     
       <div>
       
