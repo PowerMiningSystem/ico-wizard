@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
 import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
-import {Ch_lang} from './utils/Translate'
+import { addTranslation } from 'react-localize-redux'
 
-var TR_pagedata={
+
+/* var TR_pagedata={
     	"title1": {
       "1": "XPOWERMINER XPS ICO",
       "2": "XPOWERMINER XPS ICO"
@@ -34,7 +35,7 @@ var TR_pagedata={
       },
 
     };
-    
+   */
 export class Home extends Component {
   constructor(props) {
     super(props);
@@ -66,33 +67,23 @@ export class Home extends Component {
       this.props.history.push('/crowdsale' + queryStr);
   	}
   	
-    this.changeLangTo = function (in_idLang) {
-    this.currentLang = in_idLang;
-    var all_langEl = document.querySelectorAll('[data-id_phrase]');
-    var el_len = all_langEl.length;
-    for (var i = 0; i < el_len; i++) {
-      var my_phrase = Tr_pagedata[all_langEl[i].dataset.id_phrase] ? Tr_pagedata[all_langEl[i].dataset.id_phrase][this.currentLang] : null;
-      all_langEl[i].innerHTML = my_phrase ? my_phrase : defaultPhrase;
-    }
-    
-    return true;
-  };
-    
+  	 const homepg = require('../utils/homepg.json');
+store.dispatch(addTranslation(homepg));
+
   render() {
     return (
       <div>
-      
         <section className="home">
           <div className="crowdsale">
             <div className="container">
-              <h1 className="title" data-id_phrase="title1"></h1>
+              <h1 className="title">{this.homepg.title1}</h1>
               <p className="description" data-id_phrase="descrip1">
               //Конструктор ICO позволяет выпустить собственный токен и разместить контракт ICO всего за 5 шагов. С помощью нашего Конструктора Вы сможете запустить компанию по сбору средств(краудсейл) в блокчейне Ethereum, верифицировать контракты токена и ICO  на Etherscan, получить страницу отображающую ход компании по сбору средств и страницу участия в ICO 
               //<br/>Смарт контракты основаны на коде <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
               </p>
               <div className="buttons">
-                 <a onClick={this.goToCrowdsalePageH} className="button button_fill" data-id_phrase="butt1"></a>
-                <a onClick={this.goToInvestPageH} className="button button_fill" data-id_phrase="butt2"></a> 
+                 <a onClick={this.goToCrowdsalePageH} className="button button_fill">{this.homepg.butt1}</a>
+                <a onClick={this.goToInvestPageH} className="button button_fill">{this.homepg.butt2}</a> 
               </div>
             </div>
           </div>
