@@ -4,7 +4,7 @@ import { getWeb3, getNetworkVersion } from '../../utils/blockchainHelpers'
 import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
 import { ICOConfig } from '../Common/config'
-import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
+
 
 export class Home extends Component {
   constructor(props) {
@@ -63,8 +63,6 @@ export class Home extends Component {
                 </p>
               </div>
 	  </center>
-            </div>
-          </div>
         </section>
       </div>
     );
