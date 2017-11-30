@@ -8,7 +8,7 @@ import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
 import { addTranslation } from 'react-localize-redux'
 
 const homepg = require('../../utils/homepg.json');
-this.props.dispatch(addTranslation(homepg));
+dispatch(addTranslation(homepg));
 
 /* var TR_pagedata={
     	"title1": {
