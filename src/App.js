@@ -26,6 +26,7 @@ class App extends Component {
   	const {translate, currentLanguage} = this.props; //translation
     var crowdsaleAddr = getQueryVariable("addr");
     return (
+     <Provider store={ store }>
       <Router>
         <div>
           <Header/>
@@ -36,6 +37,7 @@ class App extends Component {
           <AlertContainer ref={a => toast.msg = a} {...TOAST.DEFAULT_OPTIONS} />
         </div>
       </Router>
+     </Provider>
     )
   }
 }
