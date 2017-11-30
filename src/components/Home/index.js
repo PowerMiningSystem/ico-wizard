@@ -7,7 +7,7 @@ import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
 import { addTranslation } from 'react-localize-redux'
 
-const homepg = require('./utils/homepg.json');
+const homepg = require('../../utils/homepg.json');
 store.dispatch(addTranslation(homepg));
 
 /* var TR_pagedata={
