@@ -14,31 +14,33 @@ import { localeReducer } from 'react-localize-redux'
 import { localize } from 'react-localize-redux'
 import { initialize } from 'react-localize-redux'
 
-
+const store = createStore(combineReducers({
+  locale: localeReducer
+  }));
 
 const languages = ['en', 'ru'];
 store.dispatch(initialize(languages));
 
 class App extends Component {
   render() {
-    const store = createStore(combineReducers({
-  locale: localeReducer
-  }));
+    
   	const {translate, currentLanguage} = this.props; //translation
     var crowdsaleAddr = getQueryVariable("addr");
     return (
-     <Provider store={ store }>
+     
       <Router>
         <div>
           <Header/>
+      <Provider store={ store }>
           <Route exact path="/" component={crowdsaleAddr?Crowdsale:Home}/>
           <Route exact path="/crowdsale" component={Crowdsale}/>
           <Route exact path="/invest" component={Invest}/>
+      </Provider>
           <Footer/>
           <AlertContainer ref={a => toast.msg = a} {...TOAST.DEFAULT_OPTIONS} />
         </div>
       </Router>
-     </Provider>
+     
     )
   }
 }
