@@ -7,6 +7,8 @@ import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
 import { addTranslation } from 'react-localize-redux'
 
+const homepg = require('./utils/homepg.json');
+store.dispatch(addTranslation(homepg));
 
 /* var TR_pagedata={
     	"title1": {
@@ -67,8 +69,7 @@ export class Home extends Component {
       this.props.history.push('/crowdsale' + queryStr);
   	}
   	
-  	 const homepg = require('../utils/homepg.json');
-store.dispatch(addTranslation(homepg));
+  	 
 
   render() {
     return (
