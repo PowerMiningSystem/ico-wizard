@@ -14,15 +14,16 @@ import { localeReducer } from 'react-localize-redux'
 import { localize } from 'react-localize-redux'
 import { initialize } from 'react-localize-redux'
 
-const store = createStore(combineReducers({
-  locale: localeReducer
-}));
+
 
 const languages = ['en', 'ru'];
 store.dispatch(initialize(languages));
 
 class App extends Component {
   render() {
+    const store = createStore(combineReducers({
+  locale: localeReducer
+  }));
   	const {translate, currentLanguage} = this.props; //translation
     var crowdsaleAddr = getQueryVariable("addr");
     return (
