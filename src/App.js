@@ -9,9 +9,21 @@ import {
 import AlertContainer from 'react-alert'
 import { TOAST } from './utils/constants'
 import { toast } from './utils/utils'
+import { createStore, combineReducers } from 'redux'
+import { localeReducer } from 'react-localize-redux'
+import { localize } from 'react-localize-redux'
+import { initialize } from 'react-localize-redux'
+
+const store = createStore(combineReducers({
+  locale: localeReducer
+}));
+
+const languages = ['en', 'ru'];
+store.dispatch(initialize(languages));
 
 class App extends Component {
   render() {
+  	const {translate, currentLanguage} = this.props; //translation
     var crowdsaleAddr = getQueryVariable("addr");
     return (
       <Router>
@@ -28,4 +40,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default localize(App,'locale');
