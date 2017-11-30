@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
 import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
-import {Ch_lang} from './utils/Translate'
+import {Ch_lang,changeLangTo} from './utils/Translate'
 
 var TR_pagedata={
     	"title1": {
@@ -65,12 +65,10 @@ export class Home extends Component {
 
       this.props.history.push('/crowdsale' + queryStr);
   	}
+    this.changeLangTo(2);
+    
   render() {
     return (
-    
-    
-    {Ch_lang(TR_pagedata)};
-    
       <div>
       
         <section className="home">
