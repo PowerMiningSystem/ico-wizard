@@ -78,7 +78,7 @@ export class Home extends Component {
           <div className="crowdsale">
             <div className="container">
               <h1 className="title">{this.homepg.title1}</h1>
-              <p className="description" data-id_phrase="descrip1">
+              <p className="description">
               //Конструктор ICO позволяет выпустить собственный токен и разместить контракт ICO всего за 5 шагов. С помощью нашего Конструктора Вы сможете запустить компанию по сбору средств(краудсейл) в блокчейне Ethereum, верифицировать контракты токена и ICO  на Etherscan, получить страницу отображающую ход компании по сбору средств и страницу участия в ICO 
               //<br/>Смарт контракты основаны на коде <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
               </p>
@@ -90,11 +90,11 @@ export class Home extends Component {
           </div>
               <div className="process-item">
                 <div className="step-icons step-icons_crowdsale-page"></div>
-                <p className="title" data-id_phrase="title2"></p>
-                <p className="description" data-id_phrase="descrip1">
+                <p className="title"></p>
+                <p className="description">
                 </p>
               </div>
-            </div>
+          
           </div>
         </section>
       </div>
