@@ -96,8 +96,7 @@ export class Home extends Component {
                 <p className="description">
                 </p>
               </div>
-          </div>
-         </div>
+         
         </section>
       </div>
     );
