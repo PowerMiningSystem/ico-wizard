@@ -55,6 +55,8 @@ export class Home extends Component {
             </div>
           </div>
           <center>
+	    <div className="process">
+            <div className="container">
               <div className="process-item">
                 <div className="step-icons step-icons_crowdsale-page"></div>
                 <p className="title">Страница статистики</p>
@@ -62,6 +64,8 @@ export class Home extends Component {
                   Добавьте в избранное для мониторинга статистики
                 </p>
               </div>
+	    </div>
+          </div>
 	  </center>
         </section>
       </div>
