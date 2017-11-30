@@ -95,7 +95,7 @@ export class Home extends Component {
                 </p>
               </div>
           
-          </div>
+         
         </section>
       </div>
     );
