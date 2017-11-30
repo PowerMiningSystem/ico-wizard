@@ -5,39 +5,7 @@ import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
 import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
-import { addTranslation } from 'react-localize-redux'
 
-const homepg = require('../../utils/homepg.json');
-store.dispatch(addTranslation(homepg));
-
-/* var TR_pagedata={
-    	"title1": {
-      "1": "XPOWERMINER XPS ICO",
-      "2": "XPOWERMINER XPS ICO"
-      },
-      "descrip1":{
-      "1": "XPS токены подкреплены реальным майнингом и бесплатной электроэнергией от ветрогенераторов! Смарт контракты ICO основаны на коде TokenMarket.",
-      "2": "The XPS tokens - backed with mining and free electricity from Wind Turbines!"
-      },
-      "butt1":{
-      "1":"Статистика кампании",
-      "2":"Crowdsale Page"
-      },
-      "butt2":{
-      "1":"Страница Участника",
-      "2":"Invest Page"
-      },
-      "title2":{
-      "1":"Страница кампании",
-      "2":"Crowdsale Page"
-      },
-      "descrip2":{
-      "1":"Добавьте в избранное для мониторинга статистики",
-      "2":"Bookmark this page for the campaign statistics"
-      },
-
-    };
-   */
 export class Home extends Component {
   constructor(props) {
     super(props);
@@ -68,35 +36,62 @@ export class Home extends Component {
 
       this.props.history.push('/crowdsale' + queryStr);
   	}
-  	
-  	 
-
   render() {
     return (
       <div>
         <section className="home">
           <div className="crowdsale">
             <div className="container">
-              <h1 className="title">{this.homepg.title1}</h1>
+              <h1 className="title">Конструктор ICO</h1>
               <p className="description">
-              
-              /*Конструктор ICO позволяет выпустить собственный токен и разместить контракт ICO всего за 5 шагов. С помощью нашего Конструктора Вы сможете запустить компанию по сбору средств(краудсейл) в блокчейне Ethereum, верифицировать контракты токена и ICO  на Etherscan, получить страницу отображающую ход компании по сбору средств и страницу участия в ICO 
+              Конструктор ICO позволяет выпустить собственный токен и разместить контракт ICO всего за 5 шагов. С помощью нашего Конструктора Вы сможете запустить компанию по сбору средств(краудсейл) в блокчейне Ethereum, верифицировать контракты токена и ICO  на Etherscan, получить страницу отображающую ход компании по сбору средств и страницу участия в ICO 
               <br/>Смарт контракты основаны на коде <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
-              */
               </p>
               <div className="buttons">
-                 <a onClick={this.goToCrowdsalePageH} className="button button_fill">{this.homepg.butt1}</a>
-                <a onClick={this.goToInvestPageH} className="button button_fill">{this.homepg.butt2}</a> 
+                 <a onClick={this.goToCrowdsalePageH} className="button button_fill">Статистика кампании</a>
+                <a onClick={this.goToInvestPageH} className="button button_fill">Страница Участника</a> 
               </div>
             </div>
           </div>
+          <div className="process">
+            <div className="container">
               <div className="process-item">
-                <div className="step-icons step-icons_crowdsale-page"></div>
-                <p className="title"></p>
+                <div className="step-icons step-icons_crowdsale-contract"></div>
+                <p className="title">Контракт краудсейл</p>
                 <p className="description">
+                  Выберете сценарий
                 </p>
               </div>
-         
+              <div className="process-item">
+                <div className="step-icons step-icons_token-setup"></div>
+                <p className="title">Параметры токена</p>
+                <p className="description">
+                  Настраивайте и резервируйте токены
+                </p>
+              </div>
+              <div className="process-item">
+                <div className="step-icons step-icons_crowdsale-setup"></div>
+                <p className="title">Параметры кампании</p>
+                <p className="description">
+                  Создавайте слои и задавайте параметры
+                </p>
+              </div>
+              <div className="process-item">
+                <div className="step-icons step-icons_publish"></div>
+                <p className="title">Публикация</p>
+                <p className="description">
+                  Получите код и метаданные для верификации в Etherscan
+                </p>
+              </div>
+              <div className="process-item">
+                <div className="step-icons step-icons_crowdsale-page"></div>
+                <p className="title">Страница кампании</p>
+                <p className="description">
+                  Добавьте в избранное для мониторинга статистики
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     );
