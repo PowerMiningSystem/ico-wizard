@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
 import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
-import {Ch_lang,changeLangTo} from './utils/Translate'
+import {Ch_lang} from './utils/Translate'
 
 var TR_pagedata={
     	"title1": {
@@ -65,7 +65,18 @@ export class Home extends Component {
 
       this.props.history.push('/crowdsale' + queryStr);
   	}
-    this.changeLangTo(2);
+  	
+    this.changeLangTo = function (in_idLang) {
+    this.currentLang = in_idLang;
+    var all_langEl = document.querySelectorAll('[data-id_phrase]');
+    var el_len = all_langEl.length;
+    for (var i = 0; i < el_len; i++) {
+      var my_phrase = Tr_pagedata[all_langEl[i].dataset.id_phrase] ? Tr_pagedata[all_langEl[i].dataset.id_phrase][this.currentLang] : null;
+      all_langEl[i].innerHTML = my_phrase ? my_phrase : defaultPhrase;
+    }
+    
+    return true;
+  };
     
   render() {
     return (
