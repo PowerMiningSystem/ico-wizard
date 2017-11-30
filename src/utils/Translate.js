@@ -11,17 +11,7 @@ Ch_lang = function (TR_pagedata) {
   this.currentLang = 2; // Default lang
 
   // Language interface magic goes here 
-  this.changeLangTo = function (in_idLang) {
-    this.currentLang = in_idLang;
-    var all_langEl = document.querySelectorAll('[data-id_phrase]');
-    var el_len = all_langEl.length;
-    for (var i = 0; i < el_len; i++) {
-      var my_phrase = Tr_pagedata[all_langEl[i].dataset.id_phrase] ? Tr_pagedata[all_langEl[i].dataset.id_phrase][this.currentLang] : null;
-      all_langEl[i].innerHTML = my_phrase ? my_phrase : defaultPhrase;
-    }
-    
-    return true;
-  };
+  
 
   // Translates by id nj language in_idLang else returns default lang
   this.getPhrase = function (in_idPhrase, in_idLang) {
