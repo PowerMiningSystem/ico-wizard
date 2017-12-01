@@ -59,6 +59,11 @@ const translations={
       "desc2": "Добавьте в избранное для мониторинга кампании"
         },
                   };
+const localeStore = new LocaleStore("en", translations);
+ 
+const store = {
+    locale: localeStore, 
+              }; 
   }
  goToInvestPageH = () => {
   		let queryStr = "";
