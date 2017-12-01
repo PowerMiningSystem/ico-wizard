@@ -97,8 +97,8 @@ const localeStore = new LocaleStore("en", translations);
           </center>
         </section>
       </div>
- </MobxIntlProvider>
-       </Provider>
     );
+</MobxIntlProvider>
+       </Provider>
   }
 }
