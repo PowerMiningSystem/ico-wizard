@@ -44,7 +44,7 @@ export class Home extends Component {
     const {intl: {formatMessage}, locale} = pageid;
     const injectedd=this.inject("locale");
     const observedd=this.injectIntl(observer(pageid))
-    const transltions={
+    const this.transltions={
     en: {
       "title1": "XPOWERMINER XPS ICO",
       "desc1": "The XPS tokens - backed with mining and free electricity from Wind Turbines!",
