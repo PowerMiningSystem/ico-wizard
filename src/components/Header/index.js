@@ -1,24 +1,20 @@
 import React from 'react'
 import '../../assets/stylesheets/application.css';
-import { Link } from 'react-router-dom'
-import { setActiveLanguage } from 'react-localize-redux'
+import {inject, observer} from "mobx-react" 
 
 export const Header = () => (
+
 	<header className="header">
-	<right>
-    <div className="container">  
-    const LanguageSelector = ({ languages, setActiveLanguage }) => (
-  <ul>
-    { languages.map(language => 
-      <li><button onClick={ setActiveLanguage }>{ language.code }</button></li>
-    )}
-  </ul>
-)   
+ const lang_switch = ({locale}) => <div className="container">  
+    <div>
+         <img src="././assets/images/RU.png"  className="flags"  onClick={locale.value = "ru"} </img>
     </div>
-    </right>
+    <div> 
+         <img src="././assets/images/US.png"  className="flags"  onClick={locale.value = "en"} </img>
+   </div>
+   </div>
   </header>
 )
-const mapStateToProps = state => ({ languages: getLanguages(state.locale) });
-const mapDispatchToProps = { setActiveLanguage };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LanguageSelector);
+
+export default inject("locale")(observer(lang_switch));
