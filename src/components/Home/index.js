@@ -5,14 +5,10 @@ import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
 import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
-import enLocale from 'react-intl/locale-data/en'
-import ruLocale from 'react-intl/locale-data/ru'
+
 import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 import { inject,  observer } from 'mobx-react'
 import {LocaleStore} from "mobx-react-intl"
-
-addLocaleData([...enLocale, ...ruLocale]);
-
 
 
  const transltions={
@@ -32,13 +28,7 @@ addLocaleData([...enLocale, ...ruLocale]);
         },
                   };
 
-      
-const localeStore = new LocaleStore("en", translations);
-
-const store = {
-    locale: localeStore, 
-};
-
+     
 
 /*
 
