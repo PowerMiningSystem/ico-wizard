@@ -7,11 +7,14 @@
   background-size: cover;
   background-position: center center;
 
-  .logo {
+  .flags {
     @extend %logos;
-    width: 149px;
-  	height: 35px;
-    margin-top: ($header-height - 35px) / 2;
-  	background-position: 0 -25px;
+    right: 0;
+    width: 32px;
+  	height: 32px;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 1;
+    top: 50%;
   }
 }
