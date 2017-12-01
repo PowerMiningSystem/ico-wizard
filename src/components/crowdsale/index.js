@@ -9,6 +9,7 @@ import { invalidCrowdsaleAddrAlert } from '../../utils/alerts'
 import { defaultState } from '../../utils/constants'
 import { Loader } from '../Common/Loader'
 import { ICOConfig } from '../Common/config'
+import { goToInvestPage} from '../Common/But_Nav'
 const { CROWDSALE_PAGE } = NAVIGATION_STEPS
 
 export class Crowdsale extends React.Component {
