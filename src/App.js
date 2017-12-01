@@ -15,7 +15,7 @@ import { toast } from './utils/utils'
 
 class App extends Component {
   render() {
-  	const {inject("locale")(injectIntl(observer(pageid)))}=this.props;
+  	const {(this.props.injectedd,this.props.observedd}=this.props;
     var crowdsaleAddr = getQueryVariable("addr");
     return (
       <Router>
