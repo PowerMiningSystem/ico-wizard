@@ -7,6 +7,7 @@ import { ICOConfig } from '../Common/config'
 import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
 import enLocale from 'react-intl/locale-data/en'
 import ruLocale from 'react-intl/locale-data/ru'
+import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 
 addLocaleData([...enLocale, ...ruLocale]);
 
@@ -33,7 +34,7 @@ addLocaleData([...enLocale, ...ruLocale]);
 const localeStore = new LocaleStore("en", translations);
 
 const store = {
-    locale: localeStore, // The locale store has to be called locale. 
+    locale: localeStore, 
 };
 
 
@@ -67,7 +68,9 @@ export class Home extends Component {
   constructor(props) {
     super(props);
     this.state = defaultState;
-    const {intl: {formatMessage}, locale} = pageid
+    const {intl: {formatMessage}, locale} = this.props.pageid;
+    const {inject("locale"}=this.props.injectedd;
+    const {injectIntl(observer(this.props.pageid))}=this.props.observedd
   }
  goToInvestPageH = () => {
   		let queryStr = "";
