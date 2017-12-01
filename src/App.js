@@ -14,7 +14,9 @@ import { TOAST } from './utils/constants'
 import { toast } from './utils/utils'
 import enLocale from 'react-intl/locale-data/en'
 import ruLocale from 'react-intl/locale-data/ru'
-
+const store = {
+    locale: localeStore, 
+              }; 
 
 class App extends Component {
   render() {
