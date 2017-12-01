@@ -17,7 +17,7 @@ import ruLocale from 'react-intl/locale-data/ru'
 
 addLocaleData([...enLocale, ...ruLocale]);
 
-
+const localeStore = new LocaleStore("en", translations);
 const store = {
     locale: localeStore, 
 };
