@@ -69,8 +69,8 @@ export class Home extends Component {
     super(props);
     this.state = defaultState;
     const {intl: {formatMessage}, locale} = pageid;
-    const {inject("locale")}=injectedd;
-    const {injectIntl(observer(pageid))}=observedd
+    const injectedd=this.inject("locale");
+    const observedd=this.injectIntl(observer(pageid))
   }
  goToInvestPageH = () => {
   		let queryStr = "";
