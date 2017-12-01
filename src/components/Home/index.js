@@ -61,9 +61,7 @@ const translations={
                   };
 const localeStore = new LocaleStore("en", translations);
  
-const store = {
-    locale: localeStore, 
-              }; 
+
   }
   	 
   render() {
