@@ -9,24 +9,6 @@ import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 import { inject,  observer } from 'mobx-react'
 import {LocaleStore} from "mobx-react-intl"
 
-
- const transltions={
-    en: {
-      "title1": "XPOWERMINER XPS ICO",
-      "desc1": "The XPS tokens - backed with mining and free electricity from Wind Turbines!",
-      "butt1": "Crowdsale Page",
-      "butt2": "Invest Page",
-      "desc2": "Bookmark this page for the campaign statistics"
-        },
-    ru: {
-      "title1": "XPOWERMINER XPS ICO",
-      "desc1": "XPS токены подкреплены реальным майнингом и бесплатной электроэнергией от ветрогенераторов!",
-      "butt1": "Статистика кампании",
-      "butt2": "Страница участника",
-      "desc2": "Добавьте в избранное для мониторинга кампании"
-        },
-                  };
-
      
 
 /*
@@ -62,6 +44,23 @@ export class Home extends Component {
     const {intl: {formatMessage}, locale} = pageid;
     const injectedd=this.inject("locale");
     const observedd=this.injectIntl(observer(pageid))
+    const transltions={
+    en: {
+      "title1": "XPOWERMINER XPS ICO",
+      "desc1": "The XPS tokens - backed with mining and free electricity from Wind Turbines!",
+      "butt1": "Crowdsale Page",
+      "butt2": "Invest Page",
+      "desc2": "Bookmark this page for the campaign statistics"
+        },
+    ru: {
+      "title1": "XPOWERMINER XPS ICO",
+      "desc1": "XPS токены подкреплены реальным майнингом и бесплатной электроэнергией от ветрогенераторов!",
+      "butt1": "Статистика кампании",
+      "butt2": "Страница участника",
+      "desc2": "Добавьте в избранное для мониторинга кампании"
+        },
+                  };
+
   }
  goToInvestPageH = () => {
   		let queryStr = "";
