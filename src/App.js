@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './assets/stylesheets/application.css';
 import { Provider, inject, observer } from "mobx-react"
+import {MobxIntlProvider, LocaleStore} from "mobx-react-intl"
 import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 import { Header, Footer, Home, Crowdsale, Invest } from './components/index'
 import { getQueryVariable } from './utils/utils'
