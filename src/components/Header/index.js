@@ -7,10 +7,10 @@ export const Header = () => (
 	<header className="header">
  const lang_switch = ({locale}) => <div className="container">  
     <div>
-         <img src="../../assets/images/RU.png"  className="flags"  onClick={locale.value = "ru"} </img>
+         <img src="../../assets/images/RU.png"  className="flags"  onClick={locale.value = "ru"} /img>
     </div>
     <div> 
-         <img src="../../assets/images/US.png"  className="flags"  onClick={locale.value = "en"} </img>
+         <img src="../../assets/images/US.png"  className="flags"  onClick={locale.value = "en"} /img>
    </div>
    </div>
   </header>
