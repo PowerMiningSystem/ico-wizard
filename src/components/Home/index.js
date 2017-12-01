@@ -3,7 +3,7 @@ import '../../assets/stylesheets/application.css';
 import { getWeb3, getNetworkVersion } from '../../utils/blockchainHelpers'
 import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
-import { ICOConfig } from '../Common/config'
+import { goToInvestPage,goToCrowdsalePage } from '../Common/But_Nav'
 
 import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 import { inject,  observer } from 'mobx-react'
@@ -65,34 +65,7 @@ const store = {
     locale: localeStore, 
               }; 
   }
- goToInvestPageH = () => {
-  		let queryStr = "";
-  		if (!ICOConfig.crowdsaleContractURL || !ICOConfig.networkID) {
-  			if (this.state.contracts.crowdsale.addr) {
-	  			queryStr = "?addr=" + this.state.contracts.crowdsale.addr[0];
-	  			if (this.state.networkID)
-	  				queryStr += "&networkID=" + this.state.networkID;
-	  		}
-  		}
-
-      this.props.history.push('/invest' + queryStr);
-  	}
-  
-  goToCrowdsalePageH = () => {
-  		let queryStr = "";
-  		if (!ICOConfig.crowdsaleContractURL || !ICOConfig.networkID) {
-  			if (this.state.contracts.crowdsale.addr) {
-	  			queryStr = "?addr=" + this.state.contracts.crowdsale.addr[0];
-	  			if (this.state.networkID)
-	  				queryStr += "&networkID=" + this.state.networkID;
-	  		}
-  		}
-
-      this.props.history.push('/crowdsale' + queryStr);
-  	}
-  	
   	 
-
   render() {
     return (
       <div>
@@ -102,8 +75,8 @@ const store = {
               <h1 className="title">{formatMessage({id: "title1"})}</h1>
               <p className="description">{formatMessage({id: "desc1"})}</p>
               <div className="buttons">
-                 <a onClick={this.goToCrowdsalePageH} className="button button_fill">{formatMessage({id: "butt1"})}</a>
-                <a onClick={this.goToInvestPageH} className="button button_fill">{formatMessage({id: "butt2"})}</a> 
+                 <a onClick={this.goToCrowdsalePage} className="button button_fill">{formatMessage({id: "butt1"})}</a>
+                <a onClick={this.goToInvestPage} className="button button_fill">{formatMessage({id: "butt2"})}</a> 
               </div>
             </div>
           </div>
