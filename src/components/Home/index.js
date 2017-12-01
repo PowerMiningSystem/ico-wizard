@@ -4,7 +4,6 @@ import { getWeb3, getNetworkVersion } from '../../utils/blockchainHelpers'
 import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
 import { ICOConfig } from '../Common/config'
-import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
 
 import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 import { inject,  observer } from 'mobx-react'
