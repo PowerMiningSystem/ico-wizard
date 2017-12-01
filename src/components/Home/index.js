@@ -9,8 +9,6 @@ import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 import { inject,  observer } from 'mobx-react'
 import {LocaleStore} from "mobx-react-intl"
 
-     
-
 /*
 
       },
@@ -44,7 +42,8 @@ export class Home extends Component {
     const {intl: {formatMessage}, locale} = pageid;
     const injectedd=this.inject("locale");
     const observedd=this.injectIntl(observer(pageid));
-    const transltions={
+	  
+const translations={
     en: {
       "title1": "XPOWERMINER XPS ICO",
       "desc1": "The XPS tokens - backed with mining and free electricity from Wind Turbines!",
@@ -60,8 +59,6 @@ export class Home extends Component {
       "desc2": "Добавьте в избранное для мониторинга кампании"
         },
                   };
-    const localeStore = new LocaleStore("en", translations);
-
   }
  goToInvestPageH = () => {
   		let queryStr = "";
