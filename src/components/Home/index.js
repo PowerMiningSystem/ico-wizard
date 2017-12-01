@@ -8,6 +8,7 @@ import { noDeploymentOnMainnetAlert } from '../../utils/alerts'
 import enLocale from 'react-intl/locale-data/en'
 import ruLocale from 'react-intl/locale-data/ru'
 import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
+import { inject,  observer } from 'mobx-react'
 
 addLocaleData([...enLocale, ...ruLocale]);
 
