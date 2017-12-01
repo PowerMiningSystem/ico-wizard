@@ -12,7 +12,16 @@ import {
 import AlertContainer from 'react-alert'
 import { TOAST } from './utils/constants'
 import { toast } from './utils/utils'
+import enLocale from 'react-intl/locale-data/en'
+import ruLocale from 'react-intl/locale-data/ru'
 
+addLocaleData([...enLocale, ...ruLocale]);
+
+const localeStore = new LocaleStore("en", translations);
+
+const store = {
+    locale: localeStore, 
+};
 
 class App extends Component {
   render() {
