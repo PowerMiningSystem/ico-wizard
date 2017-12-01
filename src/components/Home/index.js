@@ -4,7 +4,9 @@ import { getWeb3, getNetworkVersion } from '../../utils/blockchainHelpers'
 import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
 import { goToInvestPage,goToCrowdsalePage } from '../Common/But_Nav'
-
+import { Provider, inject, observer } from "mobx-react"
+import {MobxIntlProvider, LocaleStore} from "mobx-react-intl"
+import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 import {addLocaleData, injectIntl, FormattedMessage} from "react-intl"
 import { inject,  observer } from 'mobx-react'
 import {LocaleStore} from "mobx-react-intl"
@@ -60,11 +62,15 @@ const translations={
         },
                   };
 const localeStore = new LocaleStore("en", translations);
- 
+ const store = {
+    locale: localeStore, 
+              }; 
 
   }
   	 
   render() {
+	  <Provider {...store}> 
+         <MobxIntlProvider>
     return (
       <div>
         <section className="home">
@@ -91,6 +97,8 @@ const localeStore = new LocaleStore("en", translations);
           </center>
         </section>
       </div>
+ </MobxIntlProvider>
+       </Provider>
     );
   }
 }
