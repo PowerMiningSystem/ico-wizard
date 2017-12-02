@@ -4,7 +4,7 @@ import 'sweetalert/dist/sweetalert.css';
 export function noMetaMaskAlert() {
     sweetAlert({
       title: "Warning",
-      text: "You don't have Metamask installed. Check ICO Wizard GitHub for <a href='https://github.com/oraclesorg/ico-wizard' target='blank'>the instruction</a>.",
+      text: "You don't have Metamask installed. Check Without Metamask <a href='https://hackmd.io/s/SJSvCFJWz' target='blank'>instructions</a>.",
       html: true,
       type: "warning"
     });
