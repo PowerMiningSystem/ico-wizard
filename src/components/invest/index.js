@@ -295,7 +295,7 @@ export class Invest extends React.Component {
 
     let invalidTokenDescription = null;
     if (!this.state.pristineTokenInput && !this.isValidToken(this.state.tokensToInvest)) {
-      invalidTokenDescription = <p className="error">Введите положительное число</p>;
+      invalidTokenDescription = <p className="error">Number of tokens to buy should be positive</p>;
     }
 
     const QRPaymentProcessElement = this.state.investThrough === INVESTMENT_OPTIONS.QR ?
@@ -327,47 +327,47 @@ export class Invest extends React.Component {
           <div className="hashes">
             <div className="hashes-i">
               <p className="hashes-title">{this.state.curAddr}</p>
-              <p className="hashes-description">Ваш Аккаунт</p>
+              <p className="hashes-description">Current Account</p>
             </div>
             <div className="hashes-i">
               <p className="hashes-title">{this.state.contracts.token.addr}</p>
-              <p className="hashes-description">Адрес токена</p>
+              <p className="hashes-description">Token Address</p>
             </div>
             <div className="hashes-i">
               <p className="hashes-title">{this.state.contracts.crowdsale.addr[0]}</p>
-              <p className="hashes-description">Адрес контракта краудсейл</p>
+              <p className="hashes-description">Crowdsale Contract Address</p>
             </div>
             <div className="hashes-i hidden">
               <div className="left">
                 <p className="hashes-title">{tokenName}</p>
-                <p className="hashes-description">Наименование</p>
+                <p className="hashes-description">Name</p>
               </div>
               <div className="left">
                 <p className="hashes-title">{tokenTicker}</p>
-                <p className="hashes-description">Аббревиатура</p>
+                <p className="hashes-description">Ticker</p>
               </div>
             </div>
             <div className="hashes-i">
               <p className="hashes-title">{totalSupply} {tokenTicker}</p>
-              <p className="hashes-description">Эмиссия</p>
+              <p className="hashes-description">Total Supply</p>
             </div>
           </div>
-          <p className="invest-title">Страница участника</p>
+          <p className="invest-title">Invest page</p>
           <p className="invest-description">
-            {"Вы можете принять участие в краудсейле прозрачно с данной страницы. Для авторизации Вам необходим плагин Metamask к Google Chrome. Если у Вас нет Metamask, вы можете использовать любой кошелёк Ethereum отправив ETH на указанный справа адрес с ОБЯЗАТЕЛЬНЫМ включением в поле данных - 0xa6f2ae3a. Пример "}
+            {"Here you can invest in the crowdsale campaign. At the momemnt, you need Metamask client to invest into the crowdsale. If you don't have Metamask, you can send ethers to the crowdsale address with a MethodID: 0xa6f2ae3a. Sample "}
             <a href="https://kovan.etherscan.io/tx/0x42073576a160206e61b4d9b70b436359b8d220f8b88c7c272c77023513c62c3d">transaction</a>.
           </p>
         </div>
         <div className="invest-table-cell invest-table-cell_right">
           <div className="balance">
             <p className="balance-title">{investorBalance} {tokenTicker}</p>
-            <p className="balance-description">Баланс</p>
+            <p className="balance-description">Balance</p>
             <p className="description">
-              Количество Ваших токенов.
+              Your balance in tokens.
             </p>
           </div>
           <form className="invest-form" onSubmit={this.investToTokens}>
-            <label className="invest-form-label">Желаемое кол-во токенов</label>
+            <label className="invest-form-label">Choose amount to invest</label>
             <div className="invest-form-input-container">
               <input type="text" className="invest-form-input" value={this.state.tokensToInvest} onChange={this.tokensToInvestOnChange} placeholder="0"/>
               <div className="invest-form-label">TOKENS</div>
@@ -380,12 +380,12 @@ export class Invest extends React.Component {
               </select>
               {
                 this.state.investThrough === INVESTMENT_OPTIONS.METAMASK
-                  ? <a className="button button_fill" onClick={this.investToTokens}>Приобрести</a>
+                  ? <a className="button button_fill" onClick={this.investToTokens}>Contribute</a>
                   : null
               }
             </div>
             <p className="description">
-              Подумайте трижды перед участием в любом ICO! Токены будут переведены сразу после отправки ETH.
+              Think twice before investment in ICOs. Tokens will be deposited on a wallet you used to buy tokens.
             </p>
           </form>
           { QRPaymentProcessElement }
