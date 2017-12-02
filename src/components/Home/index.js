@@ -43,14 +43,13 @@ export class Home extends Component {
           <div className="crowdsale">
             <div className="container">
               <h1 className="title">XPOWERMINER XPS ICO</h1>
-              <p className="description">
-              XPS токены подкреплены реальным майнингом и бесплатной электроэнергией от ветрогенераторов! 
+              <p className="description"> 
 	      The XPS tokens - backed with mining and free electricity from Wind Turbines!
-              <br/>Смарт контракты основаны на коде <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
+              <br/>Based on <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
               </p>
               <div className="buttons">
-                 <a onClick={this.goToCrowdsalePageH} className="button button_fill">Статистика кампании</a>
-                <a onClick={this.goToInvestPageH} className="button button_fill">Страница участника</a> 
+                 <a onClick={this.goToCrowdsalePageH} className="button button_fill">Crowdsale Page</a>
+                <a onClick={this.goToInvestPageH} className="button button_fill">Invest Page</a> 
               </div>
             </div>
           </div>
@@ -59,9 +58,9 @@ export class Home extends Component {
             <div className="container">
               <div className="process-item">
                 <div className="step-icons step-icons_crowdsale-page"></div>
-                <p className="title">Страница статистики</p>
+                <p className="title">Crowdsale Page</p>
                 <p className="description">
-                  Добавьте в избранное для мониторинга статистики
+                  Bookmark this page for campaign statistics.
                 </p>
               </div>
 	    </div>
