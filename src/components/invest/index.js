@@ -355,7 +355,7 @@ export class Invest extends React.Component {
           <p className="invest-title">Страница участника</p>
           <p className="invest-description">
             {"Вы можете принять участие в краудсейле прозрачно с данной страницы. Для авторизации Вам необходим плагин Metamask к Google Chrome. Если у Вас нет Metamask, вы можете использовать любой кошелёк Ethereum отправив ETH на указанный справа адрес с ОБЯЗАТЕЛЬНЫМ включением в поле данных - 0xa6f2ae3a. Пример "}
-            <a href="https://kovan.etherscan.io/tx/0x42073576a160206e61b4d9b70b436359b8d220f8b88c7c272c77023513c62c3d">transaction</a>.
+            <a href="https://hackmd.io/s/SJSvCFJWz">БЕЗ Metamask</a>.
           </p>
         </div>
         <div className="invest-table-cell invest-table-cell_right">
