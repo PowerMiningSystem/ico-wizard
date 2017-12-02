@@ -3,6 +3,7 @@ import '../../assets/stylesheets/application.css';
 import { getWeb3, getNetworkVersion } from '../../utils/blockchainHelpers'
 import { Link } from 'react-router-dom'
 import { defaultState } from '../../utils/constants'
+import Header from '../components/index'
 import { goToInvestPage,goToCrowdsalePage } from '../Common/But_Nav'
 import { Provider, inject, observer } from "mobx-react"
 import {MobxIntlProvider, LocaleStore} from "mobx-react-intl"
