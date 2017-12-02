@@ -46,6 +46,7 @@ export class Home extends Component {
               <p className="description"> 
 	      The XPS tokens - backed with mining and free electricity from Wind Turbines!
               <br/>Based on <a href="https://github.com/TokenMarketNet/ico">TokenMarket</a>. 
+	      <br/> Switch to <a href="https://ico-ru.windminer.io">Russian version</a>
               </p>
               <div className="buttons">
                  <a onClick={this.goToCrowdsalePageH} className="button button_fill">Crowdsale Page</a>
