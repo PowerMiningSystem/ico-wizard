@@ -7,7 +7,7 @@ const { CROWDSALE_PAGE } = NAVIGATION_STEPS
 export const StepNavigation = ({activeStep}) => (
 	<div className="steps-navigation">
 		<div className="container">
-			<div className={getStepClass(CROWDSALE_PAGE, activeStep)}>Статистика кампании</div>
+			<div className={getStepClass(CROWDSALE_PAGE, activeStep)}>Crowdsale Page</div>
 		</div>
 	</div>
 )
